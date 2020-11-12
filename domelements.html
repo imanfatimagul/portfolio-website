@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js</title>
+  <script>
+    function myFunction() {
+  var x = document.forms["frm1"];
+  var text = "";
+  var i;
+  for (i = 0; i < x.length ;i++) {
+    text += x.elements[i].value + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+  </script>
+</head>
+<body>
+  <h2>Finding HTML Elements Using document.forms</h2>
+
+<form id="frm1" action="js forms.html">
+  First name: <input type="text" name="fname" value="Donald"><br>
+  Last name: <input type="text" name="lname" value="Duck"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<img id="image" src="https://lh3.googleusercontent.com/proxy/gzkscVPY8JiGILxiBrSkBd70qMk5rkzj_0yhSzmP4EuDkEazHS1UjdcymkHndAyRzRSFOkEtWPzTOjNka8LPE9vzEupzKXhG50_x" width="160" height="120">
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+
+</body>
+</html>

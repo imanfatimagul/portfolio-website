@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2{
+      color: red;
+    }
+  </style>
+  <script>
+    function myFunction() {
+  var txt = "";
+  if (document.getElementById("id2").validity.rangeUnderflow) {
+    txt = "Value too small";
+  } else {
+    txt = "Input OK";
+  } 
+  document.getElementById("bar1").innerHTML = txt
+}
+function myFunction() {
+  var inpObj=
+  document.getElementById("id1");
+  if (!inpObj.checkValidity()) {
+    document.getElementById("nav").innerHTML=inpObj.validationMessage;
+  }
+ else {
+    document.getElementById("nav").innerHTML = "Input OK";
+  } 
+} 
+</script>
+</head>
+<body>
+  <p>Enter a number and click OK:</p>
+
+<input id="id2" type="number" min="100">
+<button onclick="myFunction()">OK</button>
+
+<p>If the number is less than 100 (the input's max attribute), an error message will be displayed.</p>
+
+<p id="bar1"></p>
+<p>Enter a number and click OK:</p>
+<input id="id1" type="number" min="200" max="400" required>
+<button onclick="myFunction()">OK</button>
+<p>If the number is less than 200 or greater than 400, an error message will be displayed.</p>
+<p id="nav">
+  </p>
+</body>
+</html>

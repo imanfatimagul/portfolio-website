@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>call back</title>
+  <style>
+    #demo{
+      color: rgb(0, 255, 55);
+    }
+  </style>
+  <script>
+    setTimeout(myFunction,3000);
+function myFunction() {
+  document.getElementById("demo").innerHTML="I am Back"
+}
+  </script>
+</head>
+<body>
+  <h2>Javascript call back:</h2>
+<p class="id">Wait 3 seconds:</p>
+<h1 id="demo"></h1>
+<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+
+</body>
+</html>

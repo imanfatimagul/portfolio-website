@@ -2,27 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=, initial-scale=1.0">
-  <title>form</title>
-  <script>
-    function newDoc() {
-      window.location.assign("https://github.com/imanfatimagul/html-and-css")
-    }
-    function myFunction() {
-      var txt;
-      if (confirm ("Press a button") {
-        
-      }
-    }
-    
-    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript</title>
 </head>
 <body>
-  <h2>Javascript</h2>
-  <h2>The window.location object</h2>
-  <input type="button" value="Load New document" onclick="newDoc()">
-  <h3>Javascript confirm box</h3>
-  <button onclick="myFunction()">Try it</button>
-  <p id="demo"></p>
+  <h2>What Can JavaScript Do?</h2>
+
+  <p>JavaScript can change HTML attribute values.</p>
+  
+  <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+  
+  <button onclick="document.getElementById('myImage').src='https://cdn.lowgif.com/full/a9560b308a97ae03-.gif'">Turn on the button</button>
+  
+  <img id="myImage" src="https://media.gettyimages.com/photos/low-angle-view-of-electric-fan-hanging-from-ceiling-picture-id1157527620?s=612x612">
+  
+  <button onclick="document.getElementById('myImage').src='https://media.gettyimages.com/photos/low-angle-view-of-electric-fan-hanging-from-ceiling-picture-id1157527620?s=612x612'">Turn off the button</button>
+  <br><br>
+  <button type="button" onclick="window.print()">Print this page</button><br/><br/>
+  
 </body>
 </html>

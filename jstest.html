@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    .id{
+      color: red;
+    }
+    #nav{
+      font-size: 30px;
+      color: purple;
+    }
+    
+  </style>
+  <script>
+    setTimeout(myFunction,5000);
+function myFunction() {
+  document.getElementById("nav").innerHTML="Gul"
+}
+function myfunction(txt) { 
+  document.getElementById("demo").innerHTML = txt
+} 
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+onerror = handleErr;
+var txt = "";
+function handleErr(msg, url, l) {
+  txt = "There was an error on this page.\n\n";
+  txt += "Error: " + msg + "\n";
+  txt += "URL: " + url + "\n";
+  txt += "Line: " + l + "\n\n";
+  txt += "Click OK to continue.\n\n";
+  alert(txt);
+  return true;
+}
+
+function message() {
+   adddlert("Welcome guest!");
+}
+var txt = "";
+function message() {
+  try {
+    adddlert("Welcome guest!");
+  }
+  catch(err) {
+    txt = "There was an error on this page.\n\n";
+    txt += "Click OK to continue viewing this page,\n";
+    txt += "or Cancel to return to the home page.\n\n";
+    if(!confirm(txt)) {
+      document.location.href = "https://github.com/imanfatimagul/html-and-css";
+    }
+  }
+}
+function bgChange(bg) {
+  document.body.style.background = bg;
+}
+function myFunction() {
+  var x = document.getElementById("myframe").name;
+  document.getElementById("Frame").innerHTML = x;
+}
+ </script>
+</head>
+<body onload="startTime()">
+<div id="txt"></div>
+
+  <p class="id">Wait 5 seconds</p>
+  <h1>Noman</h1>
+  <p id="nav"></p>
+  <p>When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.</p>
+
+<form> 
+  <input type="button" onclick="myfunction('Good Morning!')" value="In the Morning"> 
+  <input type="button" onclick="myfunction('Good Evening!')" value="In the Evening"> 
+</form> 
+<p id="demo"></p>
+<input type="button" value="View message" onclick="message()" />
+<h2>JavaScript Error Handling</h2>
+
+<input type="button" value="View message" onclick="message()" />
+<h2>Change background color</h2>
+<p>Mouse over the squares!</p>
+
+<table style="width:300px;height:100px">
+  <tr>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:blue">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:PaleGreen">
+    </td>
+    <td onmouseover="bgChange(this.style.backgroundColor)" 
+    onmouseout="bgChange('transparent')"
+    style="background-color:Silver">
+    </td>
+  </tr>
+</table>
+<iframe id="myframe" src="https://www.javascripttutorial.net/es6/javascript-default-parameters/" name="Javascript for begginners"></iframe>
+
+<p>Click the button to return the name of the iframe.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="Frame"></p>
+
+
+</body>
+</html>
